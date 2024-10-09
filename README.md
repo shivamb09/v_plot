@@ -17,6 +17,6 @@ head filename.bed|python3 main.py > check.txt
 
 """
 
-main.py for working with linux
+main_1.py for working with shell and python
 
-main_1.py for direct python code
+main_vplot.py for direct python code
