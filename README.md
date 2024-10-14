@@ -20,3 +20,6 @@ head filename.bed|python3 main.py > check.txt
 main_1.py for working with shell and python
 
 main_vplot.py for direct python code
+
+"""
+to plot the matrix and save it linux command has been provided
