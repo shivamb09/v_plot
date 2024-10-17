@@ -31,7 +31,7 @@ with open("final_matrix_wide.txt","a") as file:
 	for keys in matrix_dict.keys():
 		new_array = np.zeros(1019,dtype = int)
 		for values in matrix_dict[keys].items():
-			pos = int(new_values[0])+509
-			new_array[pos] = new_values[1]
+			pos = int(values[0])+509
+			new_array[pos] = values[1]
 		file.write(f"{keys} " + " ".join(map(str, new_array)) + "\n")   
         
