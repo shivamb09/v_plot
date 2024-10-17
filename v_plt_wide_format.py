@@ -17,16 +17,12 @@ for line in sys.stdin:
         fragment_stop = int(new_list[9])
         len_fragment = int(new_list[11])
         
-        len_fragments.append(len_fragment)
-        
         
         ctcf_mid = mid_point(ctcf_start, ctcf_stop)
         fragment_mid = mid_point(fragment_start, fragment_stop)
         
         
         relative_distance = round(fragment_mid - ctcf_mid)
-        
-        relative_dist.append(int(relative_distance))
         
         matrix_dict[len_fragment][relative_distance] += 1
        
