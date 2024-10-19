@@ -1,14 +1,19 @@
 import sys
+
 import numpy as np
+
 from collections import defaultdict
 
 def mid_point(start, stop):
+	
     mid = (start + stop) / 2
+	
     return int(mid)
 
 matrix_dict = defaultdict(lambda:defaultdict(int))
 
 for line in sys.stdin:
+	
         line = line.strip()
 
         new_list = line.split("\t")
@@ -33,12 +38,20 @@ for line in sys.stdin:
 
 
 with open("final_matrix_wide.txt","a") as file:
+	
 	relative_positions = range(-509,510)
+	
 	file.write("Lenght"+"\t".join(map(str,relative_positions))+"\n")
+	
 	for keys in matrix_dict.keys():
+		
 		new_array = np.zeros(1019,dtype = int)
+		
 		for values in matrix_dict[keys].items():
+			
 			pos = int(values[0])+509
+			
 			new_array[pos] = values[1]
+			
 		file.write(f"{keys}\t " + "\t".join(map(str, new_array)) + "\n")   
         
