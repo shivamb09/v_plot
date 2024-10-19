@@ -32,9 +32,9 @@ for line in sys.stdin:
         matrix_dict[len_fragment][relative_distance] +=1 
 
 
-with open("final_matrix_wide_new.txt","a") as file:
+with open("final_matrix_wide.txt","a") as file:
 	relative_positions = range(-509,510)
-	file.write("\t"+"\t".join(map(str,relative_positions))+"\n")
+	file.write("Lenght"+"\t".join(map(str,relative_positions))+"\n")
 	for keys in matrix_dict.keys():
 		new_array = np.zeros(1019,dtype = int)
 		for values in matrix_dict[keys].items():
